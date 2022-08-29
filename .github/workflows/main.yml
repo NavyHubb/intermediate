@@ -1,8 +1,13 @@
+# Workflow 의 이름
 name: intermediate
+
+# action 을 실행시킬 조건
 on:
   push:
     branches:
       - main
+
+# workflow 는 다양한 job 으로 구성됨
 jobs:
   build:
     runs-on: ubuntu-latest
