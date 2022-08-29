@@ -34,7 +34,7 @@ public class Post extends Timestamped {
   @Column(nullable = false)
   private String content;
 
-  @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+  @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)  // CascadeType.ALL - Post 객체를 변경하면 여기에 물려있는 Comment 객체도 변경돼. 예를 들어 post 삭제하면 comment 도 삭제됨
   private List<Comment> comments;
 
   @JoinColumn(name = "member_id", nullable = false)
