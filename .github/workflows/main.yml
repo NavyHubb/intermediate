@@ -1,4 +1,4 @@
-name: hw05
+name: intermediate
 on:
   push:
     branches:
